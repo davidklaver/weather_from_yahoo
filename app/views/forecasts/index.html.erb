@@ -1,0 +1,10 @@
+<h3>Here's the current temperature for <%= @city %>, <%= @state %> :</h3>
+<h1><%= @current_temp %></h1>
+<h1>Search for the weather anywhere in the US!</h1>
+<%= form_tag '/forecasts', method: :get do %>
+          <%= label_tag :city %>
+          <%= text_field_tag :city %>
+          <%= label_tag :state %>
+          <%= text_field_tag :state %>
+          <%= submit_tag "Search" %>
+        <% end %>
